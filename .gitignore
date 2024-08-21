@@ -1,0 +1,3 @@
+*.bats
+/.exercism
+*.bash
