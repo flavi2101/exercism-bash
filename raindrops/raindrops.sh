@@ -1,23 +1,20 @@
 #!/usr/bin/env bash
+output=''
 
-arg_value=$1
-by_three=$(($1 % 3))
-by_five=$(($1 % 5))
-by_seven=$(($1 % 7))
-
-
-if ((by_three == 0)); then
-	echo -n "Pling" 
+if (($1 % 3 == 0)); then
+	output+=Pling 
 fi
 
-if ((by_five == 0)); then
-	echo -n "Plang"
+if (($1 % 5 == 0)); then
+	output+=Plang 
 fi
 
-if ((by_seven == 0)); then
-	echo -n "Plong"
+if (($1 % 7 == 0)); then
+	output+=Plong 
 fi
 
-if ((by_three != 0 && by_five != 0 &&  by_seven != 0)); then
+if [[ -z $output ]]; then
 	echo "$1"
+else 
+	echo "$output"
 fi
