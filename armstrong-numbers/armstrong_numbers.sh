@@ -22,3 +22,9 @@ for (( i=0; i < size ; i++)); do
                 exit 1
         fi
 done
+
+if (( sum == value )); then
+	echo "true"
+else
+	echo "false"
+fi
