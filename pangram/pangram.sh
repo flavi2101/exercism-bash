@@ -23,3 +23,13 @@ for (( i=0; i < number; i++)); do
 	fi
 	
 done
+
+#for key in "${!my_array[@]}"; do
+#	echo "${key}:${my_array[$key]}"
+#done
+
+if (( ${#my_array[*]} == 26)); then
+	echo true
+else
+        echo false
+fi
