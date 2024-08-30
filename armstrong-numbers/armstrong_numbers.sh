@@ -13,4 +13,3 @@ if (( sum == value )); then
     echo true
 else
     echo false
-fi
